@@ -1,0 +1,15 @@
+<?php 
+  
+// PHP code to illustrate the working  
+// of md5(), sha1() and hash() 
+  
+$str = 'Password'; 
+$salt = 'Username20Jun96'; 
+echo sprintf("The md5 hashed password of %s is: %s\n",  
+                                $str, md5($str.$salt)); 
+echo sprintf("The sha1 hashed password of %s is: %s\n", 
+                                $str, sha1($str.$salt)); 
+echo sprintf("The gost hashed password of %s is: %s\n",  
+                        $str, hash('sha256', $str)); 
+                          
+?> 
